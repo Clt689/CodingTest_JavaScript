@@ -1,19 +1,15 @@
 function solution(balls, share) {
-    var answer = 1;
-    var side = balls - share;
-    var divMom = 1;     // 분모
-    var divSon = 1;     // 분자
+    var answer = 1;   // 1로 초기화
+    var cnt = balls - share;
+    var divMom = 1;   // 분모
+    var divSon = 1;   // 분자
 
-    if ( side !== 0) {
-        while (side > 0) {
-            divMom *= balls;
-            divSon *= side;
-            balls--;
-            side--;
-        }
-        answer = divMom / divSon;
-        return parseInt(answer);
+    while (cnt > 0) {
+        divMom = divMom * balls;
+        divSon = divSon * cnt;
+        balls--;
+        cnt--;
     }
-
+    answer = Math.round(divMom / divSon);
     return answer;
 }
