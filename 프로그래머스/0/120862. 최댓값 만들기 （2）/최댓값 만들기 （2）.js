@@ -5,7 +5,6 @@ function solution(numbers) {
             if( numbers[i] * numbers[j] >= maxNum){
                 maxNum = numbers[i] * numbers[j];
             }
-            console.log(numbers[i] * numbers[j]);
         }
     }
     return maxNum;
