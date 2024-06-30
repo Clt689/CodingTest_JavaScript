@@ -2,9 +2,9 @@ function solution(answers) {
     const one = [1, 2, 3, 4, 5];
     const two = [2, 1, 2, 3, 2, 4, 2, 5];
     const three = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5];
-    one.name = 1; one.count = 0;
-    two.name = 2; two.count = 0;
-    three.name = 3; three.count = 0;
+    one.count = 0;
+    two.count = 0;
+    three.count = 0;
     for(let i=0; i < answers.length; i++){
         if ( answers[i] === one[i % one.length] ){
             one.count++;
